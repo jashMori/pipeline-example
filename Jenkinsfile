@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         EC2_HOST = 'ec2-user@ec2-52-66-248-28.ap-south-1.compute.amazonaws.com'
+        SSH_CREDENTIALS = credentials('ec2-dev')
     }
 
    stages {
@@ -24,9 +25,11 @@ pipeline {
         stage('Deploy to EC2') {
             steps {
                 script {
+                    sshagent(credentials: ['ec2-dev']){
                     bat """
-                        scp -i %SSH_KEY% Test.class ${EC2_HOST}:~
+                        scp -o StrictHostKeyChecking=no Test.class ${EC2_HOST}:~
                     """
+                    }
                 }
             }
         }
