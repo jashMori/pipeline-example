@@ -3,8 +3,7 @@ pipeline {
 
     environment {
         EC2_HOST = 'ec2-user@ec2-52-66-248-28.ap-south-1.compute.amazonaws.com'
-        SSH_KEY = credentials('-----BEGIN RSA PRIVATE KEY-----
-MIIEpQIBAAKCAQEA7iYDAq3DVz4PjcQLLLazup1TPfr/Th8VlWEnBg7My3qZWNjw
+        SSH_KEY = credentials('MIIEpQIBAAKCAQEA7iYDAq3DVz4PjcQLLLazup1TPfr/Th8VlWEnBg7My3qZWNjw
 b7quW0ZmvKvyyA0rB8Wn4pwURFr11Mn/W0sWZeH4Fnmnl6e8Ft48ACL8lKfzFyn3
 3u9OR5xQY8sDw/KabmSzNY9YkOhdnCDUvdx5kQR/32YO87CLRbkGI418PkBFkRlo
 v6EBbTZVXvrOCDls3mMSy81CbI66OJk2It7BDgxCQ7DIk76SQUd13iBFTSSnbmXE
@@ -28,8 +27,7 @@ F/SggP5Tx9F2RkSjWmMP8gcCgYEAq2hN1JwouiSsweoRULjjzwGh7L/R7BYAmoGr
 DH+5aRHFd6qONUclr3Y597C2taFwvnsk9k+Uc/IM0WLWS+RleMRBI31INw3wzYd0
 9et2PNMCgYEA0Q0UPqWdgHvf5AFh6yKNVUa/rn47ttKCqQfunmNXT6UIYQw2Iaff
 G4WCYbE82SOAcSgyQNdzgT7RGpt/42WzjuXFF3WQnqLOmP0Yev2q8aT/uKkPRupR
-cL6xHru/9IO+3sdxPLSphYj67iaXoW2sA1GhUiXfBuEk6bK0RBCMn6I=
------END RSA PRIVATE KEY-----')
+cL6xHru/9IO+3sdxPLSphYj67iaXoW2sA1GhUiXfBuEk6bK0RBCMn6I=')
     }
 
    stages {
